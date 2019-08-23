@@ -1,0 +1,34 @@
+---
+# tasks file for minikube
+- name: install minikube (apt)
+  apt:
+    deb: "{{ minikube_packages }}"
+    state: present
+  when:
+    - ansible_os_family == "Debian"
+  register: minikube_install_minikube_apt
+  until: minikube_install_minikube_apt is succeeded
+  notify:
+    - configure minikube to use a driver
+
+- name: install minikube (yum)
+  yum:
+    name: "{{ minikube_packages }}"
+    state: present
+  when:
+    - ansible_os_family == "RedHat"
+  register: minikube_install_minikube_yum
+  until: minikube_install_minikube_yum is succeeded
+  retries: 3
+  notify:
+    - configure minikube to use a driver
+
+- name: create minikube service
+  import_role:
+    name: robertdebock.service
+
+- name: start and enable minikube
+  service:
+    name: minikube
+    state: started
+    enabled: yes

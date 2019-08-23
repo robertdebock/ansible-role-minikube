@@ -1,0 +1,4 @@
+---
+# handlers file for minikube
+- name: configure minikube to use a driver
+  command: minikube config set vm-driver none

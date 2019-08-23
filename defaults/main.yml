@@ -1,0 +1,3 @@
+---
+# defaults file for minikube
+minikube_version: 1.3.1

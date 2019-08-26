@@ -22,8 +22,6 @@
   register: minikube_install_minikube_yum
   until: minikube_install_minikube_yum is succeeded
   retries: 3
-  notify:
-    - configure minikube to use a driver
 
 - name: create minikube service
   import_role:

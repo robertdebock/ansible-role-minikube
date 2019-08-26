@@ -85,7 +85,7 @@ This role has been tested against the following distributions and Ansible versio
 |alpine-edge*|yes|yes|yes*|
 |alpine-latest|yes|yes|yes*|
 |archlinux|yes|yes|yes*|
-|centos-6|yes|yes|yes*|
+|centos-6|no|no|no*|
 |centos-latest|yes|yes|yes*|
 |debian-stable|yes|yes|yes*|
 |debian-unstable*|yes|yes|yes*|
@@ -98,8 +98,23 @@ This role has been tested against the following distributions and Ansible versio
 
 A single star means the build may fail, it's marked as an experimental build.
 
+Exceptions
+----------
 
+Some variarations of the build matrix do not work. These are the variations and reasons why the build won't work:
 
+| variation                 | reason                 |
+|---------------------------|------------------------|
+| CentOS 6 | Depending role (python_pip) does not work on CentOS 6. |
+
+Included version(s)
+-------------------
+
+This role [refers to a version](https://github.com/robertdebock/ansible-role-minikube/blob/master/defaults/main.yml) released by Google. Check the released version(s) here:
+- [A Debian package of Minikube](https://storage.googleapis.com/minikube/releases).
+- [A Red Hat package of Minikube](https://storage.googleapis.com/minikube/releases).
+
+This version reference means a role may get outdated. Monthly tests occur to see if [bit-rot](https://en.wikipedia.org/wiki/Software_rot) occured. If you however find a problem, please create an issue, I'll get on it as soon as possible.
 
 Testing
 -------

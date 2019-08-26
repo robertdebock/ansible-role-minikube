@@ -6,4 +6,3 @@ versions:
     url: "https://storage.googleapis.com/minikube/releases"
   - name: A Red Hat package of Minikube
     url: "https://storage.googleapis.com/minikube/releases"
-

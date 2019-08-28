@@ -14,7 +14,8 @@ platforms:
   #   box: debian/stretch64
   - name: minikube-fedora
     box: fedora/30-cloud-base
-    cpus: 2
+    # cpus: 2
+    provider_cpus: 2
 provisioner:
   name: ansible
   playbooks:

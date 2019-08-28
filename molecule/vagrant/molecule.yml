@@ -10,10 +10,11 @@ driver:
   provider:
     name: virtualbox
 platforms:
-  - name: minikube-debian
-    box: debian/stretch64
+  # - name: minikube-debian
+  #   box: debian/stretch64
   - name: minikube-fedora
     box: fedora/30-cloud-base
+    cpus: 2
 provisioner:
   name: ansible
   playbooks:

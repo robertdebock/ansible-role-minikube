@@ -1,5 +1,18 @@
 ---
 # vars file for minikube
+_minikube_requirements:
+  default:
+  CentOS:
+    - ebtables
+    - ethtool
+    - socat
+  Fedora:
+    - ebtables
+    - ethtool
+    - socat
+
+minikube_requirements: "{{ _minikube_requirements[ansible_distribution] | default(_minikube_requirements['default']) }}"
+
 _minikube_packages:
   Debian:
     - "https://storage.googleapis.com/minikube/releases/latest/minikube_{{ minikube_version }}.deb"

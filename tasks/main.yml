@@ -1,5 +1,13 @@
 ---
 # tasks file for minikube
+- name: install requirements
+  package:
+    name: "{{ minikube_requirements }}"
+    state: present
+  register: minikube_install_requirements
+  until: minikube_install_requirements is succeeded
+  retries: 3
+
 - name: install minikube (apt)
   apt:
     deb: "{{ item }}"

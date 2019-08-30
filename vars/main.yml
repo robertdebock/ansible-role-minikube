@@ -21,7 +21,4 @@ _minikube_packages:
 
 minikube_packages: "{{ _minikube_packages[ansible_os_family] }}"
 
-service_list:
-  - name: minikube
-    description: Mini Kubernetes
-    start_command: /usr/bin/minikube start --vm-driver=none --apiserver-ips 127.0.0.1 --apiserver-name localhost
+minikube_command: /usr/bin/minikube start --vm-driver=none --apiserver-ips 127.0.0.1 --apiserver-name localhost

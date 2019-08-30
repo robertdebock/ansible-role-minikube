@@ -29,14 +29,9 @@
   until: minikube_install_minikube_yum is succeeded
   retries: 3
 
-- name: create minikube service
-  import_role:
-    name: robertdebock.service
-
-- name: start and enable minikube
-  service:
-    name: minikube
-    state: started
-    enabled: yes
+- name: start and minikube once
+  command: "{{ minikube_command }}"
+  args:
+    creates: nothing
   when:
     - ansible_virtualization_type != "docker"

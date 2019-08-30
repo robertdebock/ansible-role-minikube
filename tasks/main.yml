@@ -29,7 +29,7 @@
   until: minikube_install_minikube_yum is succeeded
   retries: 3
 
-- name: start and minikube once
+- name: start minikube once
   command: "{{ minikube_command }}"
   args:
     creates: nothing

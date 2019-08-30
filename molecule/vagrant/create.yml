@@ -1,0 +1,15 @@
+---
+- hosts: localhost
+  connection: local
+  tasks:
+    - name: Create instances
+      molecule_vagrant:
+        instance_name: "{{ item }}"
+        platform_box: fedora/30-cloud-base
+        provider_name: virtualbox
+        provider_memory: 1024
+        provider_cpus: 2
+        provision: true
+        state: up
+      with_items:
+        - minikube-fedora

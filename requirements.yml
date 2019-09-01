@@ -5,3 +5,4 @@
 - robertdebock.python_pip
 - robertdebock.service
 - robertdebock.kubectl
+- robertdebock.sysctl

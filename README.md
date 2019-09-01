@@ -30,11 +30,15 @@ The machine you are running this on, may need to be prepared.
   gather_facts: no
 
   roles:
-    - robertdebock.bootstrap
-    - robertdebock.epel
-    - robertdebock.python_pip
-    - robertdebock.docker
-    - robertdebock.kubectl
+    - role: robertdebock.bootstrap
+    - role: robertdebock.epel
+    - role: robertdebock.python_pip
+    - role: robertdebock.docker
+    - role: robertdebock.kubectl
+    - role: robertdebock.sysctl
+      sysctl_items:
+        name: net.bridge.bridge-nf-call-iptables
+        value: 1
 ```
 
 Also see a [full explanation and example](https://robertdebock.nl/how-to-use-these-roles.html) on how to use these roles.
@@ -47,6 +51,8 @@ These variables are set in `defaults/main.yml`:
 ---
 # defaults file for minikube
 minikube_version: 1.3.1
+
+minikube_cluster_name: my_cluster
 ```
 
 Requirements
@@ -65,6 +71,7 @@ The following roles can be installed to ensure all requirements are met, using `
 - robertdebock.python_pip
 - robertdebock.service
 - robertdebock.kubectl
+- robertdebock.sysctl
 
 ```
 

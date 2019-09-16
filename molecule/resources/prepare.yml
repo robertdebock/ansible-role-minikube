@@ -10,7 +10,7 @@
     - role: robertdebock.python_pip
     - role: robertdebock.docker
     - role: robertdebock.kubectl
-    - role: ansible-role-sysctl
+    - role: robertdebock.sysctl
       sysctl_items:
         name: net.bridge.bridge-nf-call-iptables
         value: 1

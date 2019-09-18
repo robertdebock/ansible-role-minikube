@@ -54,16 +54,6 @@ provisioner:
   playbooks:
     prepare: ../resources/prepare.yml
     converge: ../resources/playbook.yml
-  lint:
-    name: ansible-lint
-    options:
-      exclude:
-        - meta/version.yml
-        - meta/exception.yml
-  inventory:
-    host_vars:
-      minikube-fedora-latest:
-        ansible_python_interpreter: /usr/bin/python3
       minikube-fedora-rawhide:
         ansible_python_interpreter: /usr/bin/python3
 scenario:

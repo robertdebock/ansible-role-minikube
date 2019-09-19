@@ -18,6 +18,7 @@
     - "{{ minikube_packages }}"
   register: minikube_install_minikube_apt
   until: minikube_install_minikube_apt is succeeded
+  retries: 3
 
 - name: install minikube (yum)
   yum:

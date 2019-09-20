@@ -30,16 +30,6 @@
   until: minikube_install_minikube_yum is succeeded
   retries: 3
 
-- name: set cgroupdriver to systemd
-  replace:
-    path: /etc/systemd/system/kubelet.service.d/10-kubeadm.conf
-    regexp: '--cgroup-driver=cgroupfs'
-    replace: '--cgroup-driver=systemd'
-  when:
-    - ansible_virtualization_type != "docker"
-  notify:
-    - systemctl daemon-reload
-
 - name: start minikube once
   command: "{{ minikube_command }}"
   args:

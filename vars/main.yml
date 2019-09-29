@@ -6,24 +6,16 @@ _minikube_requirements:
     - ebtables
     - ethtool
     - socat
-  CentOS:
-    - ebtables
-    - ethtool
-    - socat
   Debian:
     - ebtables
     - ethtool
     - socat
-  Fedora:
-    - ebtables
-    - ethtool
-    - socat
-  Ubuntu:
+  RedHat:
     - ebtables
     - ethtool
     - socat
 
-minikube_requirements: "{{ _minikube_requirements[ansible_distribution] | default(_minikube_requirements['default']) }}"
+minikube_requirements: "{{ _minikube_requirements[ansible_os_family] | default(_minikube_requirements['default']) }}"
 
 _minikube_packages:
   Debian:

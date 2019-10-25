@@ -6,8 +6,8 @@ minikube
 
 Install and configure minikube on your system.
 
-<img src="https://img.shields.io/ansible/role/d/"/>
-<img src="https://img.shields.io/ansible/quality/"/>
+<img src="https://img.shields.io/ansible/role/d/42933"/>
+<img src="https://img.shields.io/ansible/quality/42933"/>
 
 Example Playbook
 ----------------
@@ -106,21 +106,21 @@ This role has been tested on these [container images](https://hub.docker.com/):
 
 |container|tag|allow_failures|
 |---------|---|--------------|
-|docker-alpine-openrc|latest|no|
-|docker-alpine-openrc|edge|yes|
-|docker-debian-systemd|stable|yes|
-|docker-debian-systemd|unstable|yes|
-|docker-debian-systemd|latest|no|
-|docker-centos-systemd|7|no|
-|docker-redhat-systemd|7|no|
-|docker-centos-systemd|latest|no|
-|docker-redhat-systemd|latest|no|
-|docker-fedora-systemd|latest|no|
-|docker-fedora-systemd|rawhide|yes|
-|docker-opensuse-systemd|latest|no|
-|docker-ubuntu-systemd|rolling|yes|
-|docker-ubuntu-systemd|devel|yes|
-|docker-ubuntu-systemd|latest|no|
+|alpine|latest|no|
+|alpine|edge|yes|
+|debian|stable|yes|
+|debian|unstable|yes|
+|debian|latest|no|
+|centos|7|no|
+|redhat|7|no|
+|centos|latest|no|
+|redhat|latest|no|
+|fedora|latest|no|
+|fedora|rawhide|yes|
+|opensuse|latest|no|
+|ubuntu|rolling|yes|
+|ubuntu|devel|yes|
+|ubuntu|latest|no|
 
 This role has been tested on these Ansible versions:
 

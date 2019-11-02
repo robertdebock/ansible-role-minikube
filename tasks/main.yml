@@ -34,5 +34,3 @@
   command: "{{ minikube_command }}"
   args:
     creates: nothing
-  when:
-    - ansible_virtualization_type != "docker"

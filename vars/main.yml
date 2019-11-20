@@ -25,4 +25,4 @@ _minikube_packages:
 
 minikube_packages: "{{ _minikube_packages[ansible_os_family] }}"
 
-minikube_command: /usr/bin/minikube start -p {{ minikube_cluster_name }} --vm-driver=none --apiserver-ips 127.0.0.1 --apiserver-name localhost --extra-config=kubelet.cgroup-driver=systemd
+minikube_command: /usr/bin/minikube start --vm-driver=none --apiserver-ips 127.0.0.1 --apiserver-name localhost --extra-config=kubelet.cgroup-driver=systemd

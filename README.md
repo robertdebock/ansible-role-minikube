@@ -51,7 +51,7 @@ These variables are set in `defaults/main.yml`:
 ```yaml
 ---
 # defaults file for minikube
-minikube_version: 1.3.1
+minikube_version: 1.5.2
 
 minikube_cluster_name: my_cluster
 ```

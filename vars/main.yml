@@ -14,6 +14,7 @@ _minikube_requirements:
     - ebtables
     - ethtool
     - socat
+    - kmod
 
 minikube_requirements: "{{ _minikube_requirements[ansible_os_family] | default(_minikube_requirements['default']) }}"
 

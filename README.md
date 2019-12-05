@@ -128,7 +128,6 @@ This role [refers to a version](https://github.com/robertdebock/ansible-role-min
 - [A Red Hat package of Minikube](https://storage.googleapis.com/minikube/releases).
 
 This version reference means a role may get outdated. Monthly tests occur to see if [bit-rot](https://en.wikipedia.org/wiki/Software_rot) occured. If you however find a problem, please create an issue, I'll get on it as soon as possible.
-
 Testing
 -------
 

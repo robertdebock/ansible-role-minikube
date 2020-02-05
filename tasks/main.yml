@@ -14,8 +14,7 @@
     state: present
   when:
     - ansible_os_family == "Debian"
-  with_items:
-    - "{{ minikube_packages }}"
+  loop: "{{ minikube_packages }}"
   register: minikube_install_minikube_apt
   until: minikube_install_minikube_apt is succeeded
   retries: 3

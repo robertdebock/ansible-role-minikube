@@ -1,5 +1,5 @@
 ---
-- name: Converge
+- name: prepare
   hosts: all
   become: yes
   gather_facts: no
@@ -15,3 +15,5 @@
       sysctl_items:
         - name: net.bridge.bridge-nf-call-iptables
           value: 1
+        - name: fs.protected_regular
+          value: 0

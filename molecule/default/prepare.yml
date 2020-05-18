@@ -13,5 +13,5 @@
     - role: robertdebock.kubectl
     - role: robertdebock.sysctl
       sysctl_items:
-        name: net.bridge.bridge-nf-call-iptables
-        value: 1
+        - name: net.bridge.bridge-nf-call-iptables
+          value: 1

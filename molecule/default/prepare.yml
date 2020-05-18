@@ -17,3 +17,7 @@
           value: 1
         - name: fs.protected_regular
           value: 0
+    - role: robertdebock.users
+      users_user_list:
+        - name: minikube
+          groups: docker

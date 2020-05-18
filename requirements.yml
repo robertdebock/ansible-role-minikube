@@ -3,7 +3,8 @@
 - robertdebock.core_dependencies
 - robertdebock.docker
 - robertdebock.epel
+- robertdebock.kubectl
 - robertdebock.python_pip
 - robertdebock.service
-- robertdebock.kubectl
 - robertdebock.sysctl
+- robertdebock.users

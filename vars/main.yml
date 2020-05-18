@@ -11,6 +11,7 @@ _minikube_requirements:
     - ethtool
     - socat
   RedHat:
+    - conntrack-tools
     - ebtables
     - ethtool
     - socat
@@ -26,4 +27,5 @@ _minikube_packages:
 
 minikube_packages: "{{ _minikube_packages[ansible_os_family] }}"
 
-minikube_command: /usr/bin/minikube start --vm-driver=none --apiserver-ips 127.0.0.1 --apiserver-name localhost --extra-config=kubelet.cgroup-driver=systemd
+minikube_command: /usr/bin/minikube start
+# minikube_command: /usr/bin/minikube start --vm-driver=none --apiserver-ips 127.0.0.1 --apiserver-name localhost --extra-config=kubelet.cgroup-driver=systemd

@@ -11,19 +11,20 @@ Install and configure minikube on your system.
 This example is taken from `molecule/resources/converge.yml` and is tested on each push, pull request and release.
 ```yaml
 ---
-- name: Converge
+- name: converge
   hosts: all
   become: yes
   gather_facts: yes
 
   roles:
     - role: robertdebock.minikube
+      minikube_user: minikube
 ```
 
 The machine may need to be prepared using `molecule/resources/prepare.yml`:
 ```yaml
 ---
-- name: Converge
+- name: prepare
   hosts: all
   become: yes
   gather_facts: no
@@ -37,8 +38,14 @@ The machine may need to be prepared using `molecule/resources/prepare.yml`:
     - role: robertdebock.kubectl
     - role: robertdebock.sysctl
       sysctl_items:
-        name: net.bridge.bridge-nf-call-iptables
-        value: 1
+        - name: net.bridge.bridge-nf-call-iptables
+          value: 1
+        - name: fs.protected_regular
+          value: 0
+    - role: robertdebock.users
+      users_user_list:
+        - name: minikube
+          groups: docker
 ```
 
 For verification `molecule/resources/verify.yml` run after the role has been applied.
@@ -62,7 +69,11 @@ These variables are set in `defaults/main.yml`:
 ```yaml
 ---
 # defaults file for minikube
-minikube_version: 1.5.2
+minikube_version: 1.10.1-0
+
+# `minikube start` should start as a non-root-user. This should be an exising
+# user on the Linux system. (Hint: robertdebock.users)
+minikube_user: minikube
 ```
 
 ## Requirements
@@ -78,10 +89,11 @@ The following roles can be installed to ensure all requirements are met, using `
 - robertdebock.core_dependencies
 - robertdebock.docker
 - robertdebock.epel
+- robertdebock.kubectl
 - robertdebock.python_pip
 - robertdebock.service
-- robertdebock.kubectl
 - robertdebock.sysctl
+- robertdebock.users
 
 ```
 

@@ -34,5 +34,4 @@
   args:
     creates: nothing
   when:
-    - ansible_virtualization_type != "docker"
-    - ansible_virtualization_type != "container"
+    - ansible_connection != "docker"

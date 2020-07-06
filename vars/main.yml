@@ -1,5 +1,6 @@
 ---
 # vars file for minikube
+
 _minikube_requirements:
   default:
   Alpine:

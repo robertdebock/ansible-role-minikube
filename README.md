@@ -69,7 +69,8 @@ These variables are set in `defaults/main.yml`:
 ```yaml
 ---
 # defaults file for minikube
-minikube_version: 1.10.1-0
+
+minikube_version: 1.11.0-0
 
 # `minikube start` should start as a non-root-user. This should be an exising
 # user on the Linux system. (Hint: robertdebock.users)

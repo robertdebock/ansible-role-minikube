@@ -7,9 +7,6 @@
   package:
     name: "{{ minikube_requirements }}"
     state: present
-  register: minikube_install_requirements
-  until: minikube_install_requirements is succeeded
-  retries: 3
 
 - name: install minikube (apt)
   apt:
@@ -18,9 +15,6 @@
   when:
     - ansible_os_family == "Debian"
   loop: "{{ minikube_packages }}"
-  register: minikube_install_minikube_apt
-  until: minikube_install_minikube_apt is succeeded
-  retries: 3
 
 - name: install minikube (yum)
   yum:
@@ -28,9 +22,6 @@
     state: present
   when:
     - ansible_os_family == "RedHat"
-  register: minikube_install_minikube_yum
-  until: minikube_install_minikube_yum is succeeded
-  retries: 3
 
 - name: start minikube once
   command: "{{ minikube_command }}"

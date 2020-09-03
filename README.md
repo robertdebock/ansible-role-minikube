@@ -58,7 +58,7 @@ For verification `molecule/resources/verify.yml` run after the role has been app
 
   tasks:
     - name: run minikube --help
-      command: minikube --help
+      command: /usr/bin/minikube --help
 ```
 
 Also see a [full explanation and example](https://robertdebock.nl/how-to-use-these-roles.html) on how to use these roles.
@@ -111,11 +111,9 @@ This role has been tested on these [container images](https://hub.docker.com/u/r
 
 |container|tags|
 |---------|----|
-|alpine|all|
 |el|7, 8|
 |debian|buster, bullseye|
 |fedora|31, 32|
-|opensuse|all|
 |ubuntu|focal, bionic, xenial|
 
 The minimum version of Ansible required is 2.8 but tests have been done to:

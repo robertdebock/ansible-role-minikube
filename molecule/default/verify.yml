@@ -6,4 +6,4 @@
 
   tasks:
     - name: run minikube --help
-      command: minikube --help
+      command: /usr/bin/minikube --help

@@ -5,5 +5,5 @@
   gather_facts: no
 
   tasks:
-    - name: check if connection still works
-      ping:
+    - name: run minikube --help
+      command: minikube --help

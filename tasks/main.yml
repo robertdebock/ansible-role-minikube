@@ -20,6 +20,7 @@
   yum:
     name: "{{ minikube_packages }}"
     state: present
+    disable_gpg_check: yes
   when:
     - ansible_os_family == "RedHat"
 

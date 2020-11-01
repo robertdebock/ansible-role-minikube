@@ -1,10 +1,11 @@
 ---
-- robertdebock.bootstrap
-- robertdebock.core_dependencies
-- robertdebock.docker
-- robertdebock.epel
-- robertdebock.kubectl
-- robertdebock.python_pip
-- robertdebock.service
-- robertdebock.sysctl
-- robertdebock.users
+roles:
+  - name: robertdebock.bootstrap
+  - name: robertdebock.core_dependencies
+  - name: robertdebock.docker
+  - name: robertdebock.epel
+  - name: robertdebock.kubectl
+  - name: robertdebock.python_pip
+  - name: robertdebock.service
+  - name: robertdebock.sysctl
+  - name: robertdebock.users

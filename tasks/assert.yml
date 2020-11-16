@@ -3,12 +3,10 @@
   assert:
     that:
       - minikube_version is defined
-      - minikube_version | length > 0
     quiet: yes
 
 - name: test if minikube_user is set correctly
   assert:
     that:
       - minikube_user is defined
-      - minikube_user | length > 0
     quiet: yes

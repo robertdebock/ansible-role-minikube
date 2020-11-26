@@ -1,4 +1,5 @@
 ---
+
 - name: test if minikube_version is set correctly
   assert:
     that:

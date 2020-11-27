@@ -4,10 +4,12 @@
   assert:
     that:
       - minikube_version is defined
+      - minikube_version is string
     quiet: yes
 
 - name: test if minikube_user is set correctly
   assert:
     that:
       - minikube_user is defined
+      - minikube_user is string
     quiet: yes

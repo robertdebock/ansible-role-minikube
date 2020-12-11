@@ -4,7 +4,7 @@ Install and configure minikube on your system.
 
 |Travis|GitHub|GitLab|Quality|Downloads|Version|
 |------|------|------|-------|---------|-------|
-|[![travis](https://travis-ci.com/robertdebock/ansible-role-minikube.svg?branch=master)](https://travis-ci.com/robertdebock/ansible-role-minikube)|[![github](https://github.com/robertdebock/ansible-role-minikube/workflows/Ansible%20Molecule/badge.svg)](https://github.com/robertdebock/ansible-role-minikube/actions)|[![gitlab](https://gitlab.com/robertdebock/ansible-role-minikube/badges/master/pipeline.svg)](https://gitlab.com/robertdebock/ansible-role-minikube)|[![quality](https://img.shields.io/ansible/quality/)](https://galaxy.ansible.com/robertdebock/minikube)|[![downloads](https://img.shields.io/ansible/role/d/)](https://galaxy.ansible.com/robertdebock/minikube)|[![Version](https://img.shields.io/github/release/robertdebock/ansible-role-minikube.svg)](https://github.com/robertdebock/ansible-role-minikube/releases/)|
+|[![travis](https://travis-ci.com/robertdebock/ansible-role-minikube.svg?branch=master)](https://travis-ci.com/robertdebock/ansible-role-minikube)|[![github](https://github.com/robertdebock/ansible-role-minikube/workflows/Ansible%20Molecule/badge.svg)](https://github.com/robertdebock/ansible-role-minikube/actions)|[![gitlab](https://gitlab.com/robertdebock/ansible-role-minikube/badges/master/pipeline.svg)](https://gitlab.com/robertdebock/ansible-role-minikube)|[![quality](https://img.shields.io/ansible/quality/42933)](https://galaxy.ansible.com/robertdebock/minikube)|[![downloads](https://img.shields.io/ansible/role/d/42933)](https://galaxy.ansible.com/robertdebock/minikube)|[![Version](https://img.shields.io/github/release/robertdebock/ansible-role-minikube.svg)](https://github.com/robertdebock/ansible-role-minikube/releases/)|
 
 ## [Example Playbook](#example-playbook)
 
@@ -66,10 +66,11 @@ minikube_user: minikube
 
 ## [Requirements](#requirements)
 
-- Access to a repository containing packages, likely on the internet.
-- A recent version of Ansible. (Tests run on the current, previous and next release of Ansible.)
+- pip packages listed in [requirements.txt](https://github.com/robertdebock/ansible-role-minikube/blob/master/requirements.txt).
 
 ## [Status of requirements](#status-of-requirements)
+
+The following roles are used to prepare a system. You may choose to prepare your system in another way, I have tested these roles as well.
 
 | Requirement | Travis | GitHub |
 |-------------|--------|--------|

@@ -7,12 +7,12 @@
   delegate_to: localhost
 
 - name: install requirements
-  package:
+  ansible.builtin.package:
     name: "{{ minikube_requirements }}"
     state: present
 
 - name: install minikube (apt)
-  apt:
+  ansible.builtin.apt:
     deb: "{{ item }}"
     state: present
   when:
@@ -20,7 +20,7 @@
   loop: "{{ minikube_packages }}"
 
 - name: install minikube (yum)
-  yum:
+  ansible.builtin.yum:
     name: "{{ minikube_packages }}"
     state: present
     disable_gpg_check: yes

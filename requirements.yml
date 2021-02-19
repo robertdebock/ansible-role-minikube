@@ -9,5 +9,3 @@ roles:
   - name: robertdebock.service
   - name: robertdebock.sysctl
   - name: robertdebock.users
-collections:
-  - name: ansible.builtin

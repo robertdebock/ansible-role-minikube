@@ -28,7 +28,7 @@
     - ansible_os_family == "RedHat"
 
 - name: start minikube once
-  command: "{{ minikube_command }}"
+  ansible.builtin.command: "{{ minikube_command }}"
   args:
     creates: nothing
   when:

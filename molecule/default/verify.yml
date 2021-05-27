@@ -6,4 +6,5 @@
 
   tasks:
     - name: run minikube --help
-      command: /usr/bin/minikube --help
+      ansible.builtin.command:
+        cmd: /usr/bin/minikube --help

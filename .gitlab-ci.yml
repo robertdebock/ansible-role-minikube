@@ -16,8 +16,6 @@ molecule:
   retry: 1
   parallel:
     matrix:
-      - image: "rockylinux"
-        tag: "latest"
       - image: "debian"
         tag: "latest"
       - image: "debian"

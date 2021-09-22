@@ -33,8 +33,6 @@ jobs:
       fail-fast: false
       matrix:
         config:
-          - image: "rockylinux"
-            tag: "latest"
           - image: "debian"
             tag: "latest"
           - image: "debian"

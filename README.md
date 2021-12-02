@@ -57,8 +57,6 @@ The default values for the variables are set in `defaults/main.yml`:
 ---
 # defaults file for minikube
 
-minikube_version: "1.24.0"
-
 # `minikube start` should start as a non-root-user. This should be an exising
 # user on the Linux system. (Hint: robertdebock.users)
 minikube_user: minikube

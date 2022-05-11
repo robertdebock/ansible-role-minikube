@@ -99,7 +99,7 @@ This role has been tested on these [container images](https://hub.docker.com/u/r
 |container|tags|
 |---------|----|
 |debian|all|
-|fedora|34, 35|
+|fedora|all|
 |ubuntu|all|
 
 The minimum version of Ansible required is 2.10, tests have been done to:
@@ -108,13 +108,6 @@ The minimum version of Ansible required is 2.10, tests have been done to:
 - The current version.
 - The development version.
 
-## [Included version(s)](#included-versions)
-
-This role [refers to a version](https://github.com/robertdebock/ansible-role-minikube/blob/master/defaults/main.yml) released by Google. Check the released version(s) here:
-- [A Debian package of Minikube](https://storage.googleapis.com/minikube/releases).
-- [A Red Hat package of Minikube](https://storage.googleapis.com/minikube/releases).
-
-This version reference means a role may get outdated. Monthly tests occur to see if [bit-rot](https://en.wikipedia.org/wiki/Software_rot) occured. If you however find a problem, please create an issue, I'll get on it as soon as possible.
 
 If you find issues, please register them in [GitHub](https://github.com/robertdebock/ansible-role-minikube/issues)
 

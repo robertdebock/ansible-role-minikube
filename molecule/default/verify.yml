@@ -5,6 +5,6 @@
   gather_facts: no
 
   tasks:
-    - name: run minikube --help
+    - name: Run minikube --help
       ansible.builtin.command:
         cmd: /usr/bin/minikube --help

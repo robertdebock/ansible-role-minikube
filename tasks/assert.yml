@@ -5,4 +5,5 @@
     that:
       - minikube_user is defined
       - minikube_user is string
+      - minikube_user is not none
     quiet: yes

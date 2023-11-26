@@ -1,4 +1,4 @@
-# Ansible role [minikube](#minikube)
+# [Ansible role minikube](#minikube)
 
 Install and configure minikube on your system.
 

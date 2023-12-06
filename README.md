@@ -45,7 +45,7 @@ The machine needs to be prepared. In CI this is done using [`molecule/default/pr
         - name: fs.protected_regular
           value: 0
     - role: robertdebock.users
-      users_user_list:
+      users:
         - name: minikube
           groups: docker
 ```

@@ -1,0 +1,25 @@
+digraph PhiloDilemma {
+  label = "Robert de Bock" ;
+  overlap=false
+  {
+    "minikube" [fillcolor=yellow style=filled penwidth=3]
+    "robertdebock.bootstrap" [fillcolor=green style=filled]
+    "robertdebock.core_dependencies" [fillcolor=green style=filled]
+    "robertdebock.docker" [fillcolor=green style=filled]
+    "robertdebock.epel" [fillcolor=green style=filled]
+    "robertdebock.kubectl" [fillcolor=green style=filled]
+    "robertdebock.python_pip" [fillcolor=green style=filled]
+    "robertdebock.service" [fillcolor=green style=filled]
+    "robertdebock.sysctl" [fillcolor=green style=filled]
+    "robertdebock.users" [fillcolor=green style=filled]
+  }
+  "minikube" -> "robertdebock.bootstrap"
+  "minikube" -> "robertdebock.core_dependencies"
+  "minikube" -> "robertdebock.docker"
+  "minikube" -> "robertdebock.epel"
+  "minikube" -> "robertdebock.kubectl"
+  "minikube" -> "robertdebock.python_pip"
+  "minikube" -> "robertdebock.service"
+  "minikube" -> "robertdebock.sysctl"
+  "minikube" -> "robertdebock.users"
+}
